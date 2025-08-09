@@ -1,2 +1,2 @@
 # snippets
-A set of automation tools for Obsidian snipp[et switching.
+A set of automation tools for Obsidian snippet switching.
