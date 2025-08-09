@@ -1,51 +1,19 @@
-#!/usr/bin/env bash
-
-VAULT=/tank/obsidian-vault/private/.obsidian/snippets
 
 clear
 echo "----------------------------------------"
-echo "Obsidian CSS Snippets Picker"
+echo "Obsidian CSS Snippets Tool"
 echo "----------------------------------------"
 
-echo "- Copying current Obsidian snippets ..."
-cp "$VAULT"/*.css ./css
-echo "----------------------------------------"
+VAULT=/tank/obsidian-vault/private/.obsidian/snippets
+SCRIPT=$(echo "$PWD")
 
-options=("Exit" "stable" "universal" "Create New")
+echo "Removing current stylesheets from Obsidian vault ..."
+rm "$VAULT"/*.css
 
-while true; do
-    PS3="Select project: "
-    
-    select opt in "${options[@]}"; do
-        case $opt in
-            "Create New")
-                echo "$opt"
-                echo "[dev] New project stuff ..."
-                read -p "Project Name: " project_name
-                mkdir "$project_name"
-                echo "[dev] would you like to select this repo?"
-                exit 0
-                ;;
-            "universal")
-                echo "$opt"
-                echo "[dev] universal repo ..."
-                exit 0
-                ;;
-            "stable")
-                echo "$opt"
-                echo "[dev] stable repo ..."
-                exit 0
-                ;;
-            "Exit")
-                echo "$opt ..."
-                echo "Bye."
-                exit 0
-                ;;
-            *)
-                echo ""
-                echo "Invalid option."
-                ;;
-        esac
-    done
-done
+echo "Copying universal stylesheets to Obsidian vault ..."
+cp ./css/*.css "$VAULT"
+
+echo "That's it! Update your settings in the Appearance section of your vault settings."
+exit 0
+
 
