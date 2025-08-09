@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 
+VAULT=/tank/obsidian-vault/private/.obsidian/snippets
+
 clear
 echo "----------------------------------------"
 echo "Obsidian CSS Snippets Picker"
+echo "----------------------------------------"
+
+echo "- Copying current Obsidian snippets ..."
+cp "$VAULT"/*.css ./css
 echo "----------------------------------------"
 
 options=("Exit" "stable" "universal" "Create New")

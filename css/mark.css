@@ -1,0 +1,18 @@
+.markdown-rendered mark {
+    padding: var(--size-2-1) var(--size-2-2);
+    margin: var(--size-2-1);
+}
+
+.theme-light {
+    .markdown-rendered mark {
+        background-color: rgba(var(--ctp-latte-yellow-rgb), 0.5);
+        color: var(--text-normal);
+    }
+}
+
+.theme-dark {
+    .markdown-rendered mark {
+        background-color: var(--ctp-mocha-yellow);
+        color: var(--ctp-mocha-mantle);
+    }
+}

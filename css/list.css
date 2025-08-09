@@ -1,0 +1,39 @@
+ul.contains-task-list {
+    margin: 1rem 0;
+}
+
+li[data-task="/"] input,
+li[data-task="-"] input,
+li[data-task=">"] input,
+li[data-task="<"] input,
+li[data-task="?"] input,
+li[data-task="!"] input,
+li[data-task="*"] input,
+li[data-task='"'] input,
+li[data-task="l"] input,
+li[data-task="b"] input,
+li[data-task="i"] input,
+li[data-task="S"] input,
+li[data-task="I"] input,
+li[data-task="p"] input,
+li[data-task="c"] input,
+li[data-task="f"] input,
+li[data-task="k"] input,
+li[data-task="w"] input,
+li[data-task="u"] input,
+li[data-task="d"] input {
+  pointer-events: none;
+}
+
+li[data-task="0"],
+li[data-task="1"],
+li[data-task="2"],
+li[data-task="3"],
+li[data-task="4"],
+li[data-task="5"],
+li[data-task="6"],
+li[data-task="7"],
+li[data-task="8"],
+li[data-task="9"] {
+  margin: 0.5rem !important;
+}

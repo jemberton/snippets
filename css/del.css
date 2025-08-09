@@ -1,0 +1,15 @@
+body {
+    --del-color: var(--ctp-latte-overlay0);
+}
+
+del {
+    color: var(--del-color);
+}
+
+.theme-light {
+    --del-color: var(--ctp-latte-overlay0);
+}
+
+.theme-dark {
+    --del-color: var(--ctp-mocha-overlay0);
+}

@@ -1,0 +1,25 @@
+kbd {
+    padding: var(--size-4-1) var(--size-4-2);
+    line-height: var(--line-height-normal);
+    font-family: "Agave Nerd Font Mono";
+    font-weight: bold;
+    font-size: 1.0rem;
+}
+
+.theme-light {
+    kbd {
+        color: rgb(var(--ctp-latte-text-rgb));
+        background: rgb(var(--ctp-latte-mantle-rgb));
+        box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+        border: 1px solid rgba(var(--ctp-latte-overlay0-rgb), 0.5);
+    }
+}
+
+.theme-dark {
+    kbd {
+        color: rgb(var(--ctp-mocha-text-rgb));
+        background: rgb(var(--ctp-mocha-surface0-rgb));
+        box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+        border: 1px solid rgba(var(--ctp-mocha-surface1-rgb), 0.5);
+    }
+}

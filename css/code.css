@@ -1,0 +1,19 @@
+body {
+    --codebg: var(--ctp-latte-crust-rgb);
+}
+
+code {
+    background: rgb(var(--codebg)) !important;
+}
+
+.theme-light {
+    code {
+        --codebg: var(--ctp-latte-crust-rgb);
+    }
+}
+
+.theme-dark {
+    code {
+        --codebg: var(--ctp-mocha-crust-rgb);
+    }
+}

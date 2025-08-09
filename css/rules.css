@@ -1,0 +1,176 @@
+/*============================================================================*/
+/* Horizontal Rules: global                                                   */
+/*============================================================================*/
+.markdown-reading-view hr { margin: var(--size-4-8) 0; }
+
+.hr-rainbow {
+    --r: var(--ctp-latte-red);
+    --o: var(--ctp-latte-peach);
+    --y: var(--ctp-latte-yellow);
+    --g: var(--ctp-latte-green);
+    --b: var(--ctp-latte-blue);
+    --i: var(--ctp-latte-lavender);
+    --v: var(--ctp-latte-mauve);
+
+    border: none !important;
+    height: 0.35em;
+    background-image: repeating-linear-gradient(to right,
+        var(--r) 0px, var(--r) 14.3%,
+        var(--o) 14.3%, var(--o) 28.6%,
+        var(--y) 28.6%, var(--y) 42.9%,
+        var(--g) 42.9%, var(--g) 57.2%,
+        var(--b) 57.2%, var(--b) 71.5%,
+        var(--i) 71.5%, var(--i) 85.8%,
+        var(--v) 85.8%, var(--v) 100%
+    );
+    background-size: 100%;
+    background-repeat:no-repeat;
+}
+
+.hr-fancy {
+    --top: var(--ctp-latte-surface1);
+    --bottom: var(--ctp-latte-mantle);
+    --symbol: var(--ctp-latte-overlay1);
+
+    border-top: 2px solid var(--top) !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: 2px solid var(--bottom) !important;
+    text-align: center;
+    overflow: visible;
+    height: 0px;
+    margin: var(--size-4-12) 0 !important;
+
+    &::after {
+        content: "§";
+        font-family: "Agave Nerd Font Mono";
+        position: relative;
+        display: inline-block;
+        top: -1.5rem;
+        background: var(--background-primary);
+        color: var(--symbol);
+        padding: 0.25rem 1rem;
+        font-size: 2.0em;
+    }
+}
+
+.hr-dots {
+    --c: var(--ctp-latte-surface1);
+
+    border: none !important;
+    height: var(--size-4-2);
+    background-image: linear-gradient(to right, var(--c) 0.2rem, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 2rem 0.2rem;
+    background-repeat: repeat-x;
+}
+
+.hr-draft {
+    --c: var(--ctp-latte-surface1);
+
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: 2px dashed var(--c) !important;
+    text-align: center;
+    overflow: visible;
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+    height: 0px;
+    color: var(--c);
+
+    &.left { text-align: left; padding-left: 1rem; }
+    &.right { text-align: right; padding-right: 1rem; }
+}
+
+/*============================================================================*/
+/* Horizontal Rules: colors                                                   */
+/*============================================================================*/
+
+.theme-light {
+    .hr-rainbow {
+        --r: var(--ctp-latte-red);
+        --o: var(--ctp-latte-peach);
+        --y: var(--ctp-latte-yellow);
+        --g: var(--ctp-latte-green);
+        --b: var(--ctp-latte-blue);
+        --i: var(--ctp-latte-lavender);
+        --v: var(--ctp-latte-mauve);
+    }
+
+    .hr-fancy {
+        --top: var(--ctp-latte-surface1);
+        --bottom: var(--ctp-latte-mantle);
+        --symbol: var(--ctp-latte-overlay1);
+    }
+
+    .hr-dots {
+        --c: var(--ctp-latte-surface1);
+    }
+
+    .hr-draft {
+        --c: var(--ctp-latte-overlay0);
+        color: var(--ctp-latte-subtext0);
+
+        &[data-content]:not([data-content=""]) {
+            &:after {
+                border: 2px dashed var(--c);
+                border-radius: 4px;
+                content: attr(data-content);
+                background: var(--background-primary) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%238c8fa1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-message-square-dashed'%3E%3Cpath d='M10 17H7l-4 4v-7'/%3E%3Cpath d='M14 17h1'/%3E%3Cpath d='M14 3h1'/%3E%3Cpath d='M19 3a2 2 0 0 1 2 2'/%3E%3Cpath d='M21 14v1a2 2 0 0 1-2 2'/%3E%3Cpath d='M21 9v1'/%3E%3Cpath d='M3 9v1'/%3E%3Cpath d='M5 3a2 2 0 0 0-2 2'/%3E%3Cpath d='M9 3h1'/%3E%3C/svg%3E") no-repeat;
+                background-position: left 0.25em top 0.25em;
+                font-family: "Agave Nerd Font Mono";
+                position: relative;
+                display: inline-block;
+                top: -1.0rem;
+                padding: 0.25rem 0.65rem;
+                font-size: 1.0em;
+                padding-left: 2.25rem;
+            }
+        }
+    }
+}
+
+.theme-dark {
+    .hr-rainbow {
+        --r: var(--ctp-mocha-red);
+        --o: var(--ctp-mocha-peach);
+        --y: var(--ctp-mocha-yellow);
+        --g: var(--ctp-mocha-green);
+        --b: var(--ctp-mocha-blue);
+        --i: var(--ctp-mocha-lavender);
+        --v: var(--ctp-mocha-mauve);
+    }
+
+    .hr-fancy {
+        --top: var(--ctp-mocha-crust);
+        --bottom: var(--ctp-mocha-surface0);
+        --symbol: var(--ctp-mocha-surface2);
+    }
+
+    .hr-dots {
+        --c: var(--ctp-mocha-surface2);
+    }
+
+    .hr-draft {
+        --c: var(--ctp-mocha-overlay0);
+        color: var(--ctp-mocha-overlay1);
+
+        &[data-content]:not([data-content=""]) {
+            &:after {
+                border: 2px dashed var(--c);
+                border-radius: 4px;
+                content: attr(data-content);
+                background: var(--background-primary) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236c7086' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-message-square-dashed'%3E%3Cpath d='M10 17H7l-4 4v-7'/%3E%3Cpath d='M14 17h1'/%3E%3Cpath d='M14 3h1'/%3E%3Cpath d='M19 3a2 2 0 0 1 2 2'/%3E%3Cpath d='M21 14v1a2 2 0 0 1-2 2'/%3E%3Cpath d='M21 9v1'/%3E%3Cpath d='M3 9v1'/%3E%3Cpath d='M5 3a2 2 0 0 0-2 2'/%3E%3Cpath d='M9 3h1'/%3E%3C/svg%3E") no-repeat;
+                background-position: left 0.25em top 0.25em;
+                font-family: "Agave Nerd Font Mono";
+                position: relative;
+                display: inline-block;
+                top: -1.0rem;
+                padding: 0.25rem 0.65rem;
+                font-size: 1.0em;
+                padding-left: 2.25rem;
+            }
+        }
+    }
+}

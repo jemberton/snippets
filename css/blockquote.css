@@ -1,0 +1,8 @@
+blockquote {
+    background: var(--background-secondary) !important;
+    padding: var(--size-4-2) var(--size-4-4) !important;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    border-width: 3px !important;
+    border-color: var(--interactive-normal) !important;
+}

@@ -1,0 +1,47 @@
+body {
+    --figure-background: var(--ctp-latte-mantle-rgb);
+    --figcaption-color: var(--ctp-latte-subtext0-rgb);
+    --figcaption-border-color: var(--ctp-latte-text-rgb);
+}
+
+figure.image-captions-figure {
+    background: rgb(var(--figure-background)) !important;
+    padding: 0;
+    margin: 0;
+    border: none;
+
+    figcaption.image-captions-caption {
+        background: rgb(var(--figure-background)) !important;
+        color: rgb(var(--figcaption-color)) !important;
+        border-bottom: 2px dashed rgba(var(--figcaption-border-color), 0.2);
+        padding: 0.5rem 1rem;
+    }
+}
+
+.external-link:has(figure) {
+    text-decoration: none !important;
+
+    figure.image-captions-figure {
+        &:hover { 
+            figcaption.image-captions-caption {
+                    border-color: var(--link-external-color-hover);
+            }
+        }
+    }
+    
+    figcaption.image-captions-caption {
+        color: inherit !important;
+    }
+}
+
+.theme-light {
+    --figure-background: var(--ctp-latte-mantle-rgb);
+    --figcaption-color: var(--ctp-latte-subtext0-rgb);
+    --figcaption-border-color: var(--ctp-latte-text-rgb);
+}
+
+.theme-dark {
+    --figure-background: var(--ctp-mocha-mantle-rgb);
+    --figcaption-color: var(--ctp-mocha-subtext0-rgb);
+    --figcaption-border-color: var(--ctp-mocha-overlay0-rgb);
+}
