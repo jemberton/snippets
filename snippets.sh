@@ -5,7 +5,7 @@ echo "----------------------------------------"
 echo "Obsidian CSS Snippets Picker"
 echo "----------------------------------------"
 
-options=("Exit" "universal" "current" "Create New")
+options=("Exit" "stable" "universal" "Create New")
 
 while true; do
     PS3="Select project: "
@@ -25,9 +25,9 @@ while true; do
                 echo "[dev] universal repo ..."
                 exit 0
                 ;;
-            "current")
+            "stable")
                 echo "$opt"
-                echo "[dev] current repo ..."
+                echo "[dev] stable repo ..."
                 exit 0
                 ;;
             "Exit")
@@ -41,7 +41,5 @@ while true; do
                 ;;
         esac
     done
-    
-    read -p "Press Enter to continue ..."
 done
 
