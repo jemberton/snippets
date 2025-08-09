@@ -1,0 +1,32 @@
+/*.markdown-source-view, .markdown-preview-view {
+    max-width: 90%;
+    margin: auto;
+}*/
+
+.markdown-preview-sizer, .cm-sizer {
+    --custom-readable-width: 80%;
+
+    max-width: var(--custom-readable-width) !important;
+    width: var(--custom-readable-width) !important;
+}
+
+.cm-contentContainer, .cm-content, .cm-line {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+.cm-line {
+    padding-left: 20px !important;
+}
+
+.cm-gutters {
+    margin-inline-end: 0 !important;
+}
+
+.cm-active {
+    background: var(--background-modifier-active-hover);
+}
+
+.HyperMD-list-line, .HyperMD-quote {
+    text-indent: 0 !important;
+}

@@ -41,7 +41,5 @@ while true; do
                 ;;
         esac
     done
-    
-    read -p "Press Enter to continue ..."
 done
 

@@ -1,0 +1,17 @@
+.markdown-preview-view, .markdown-source-view {
+    em {
+        color: var(--color-green);
+    }
+    
+    strong {
+        color: var(--color-red);
+    }
+    
+    strong em, em strong {
+        color: var(--color-orange);
+    }
+    
+    del {
+        filter: saturate(0.5) opacity(0.5);
+    }
+}
