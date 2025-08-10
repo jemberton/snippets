@@ -1,25 +1,37 @@
 .markdown-preview-view, .markdown-source-view {
-    h1, .HyperMD-header-1, .cm-formatting-header-1 {
+    h1,
+    .HyperMD-header-1,
+    .cm-formatting-header-1 {
         color: var(--color-red);
     }
     
-    h2, .HyperMD-header-2, .cm-formatting-header-2 {
+    h2,
+    .HyperMD-header-2,
+    .cm-formatting-header-2 {
         color: var(--color-yellow);
     }
     
-    h3, .HyperMD-header-3, .cm-formatting-header-3 {
+    h3,
+    .HyperMD-header-3,
+    .cm-formatting-header-3 {
         color: var(--color-orange);
     }
     
-    h4, .HyperMD-header-4, .cm-formatting-header-4 {
+    h4,
+    .HyperMD-header-4,
+    .cm-formatting-header-4 {
         color: var(--color-green);
     }
     
-    h5, .HyperMD-header-5, .cm-formatting-header-5 {
+    h5,
+    .HyperMD-header-5,
+    .cm-formatting-header-5 {
         color: var(--color-blue);
     }
     
-    h6, .HyperMD-header-6, .cm-formatting-header-6 {
+    h6,
+    .HyperMD-header-6,
+    .cm-formatting-header-6 {
         color: var(--color-purple);
     }
 }

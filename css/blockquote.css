@@ -1,0 +1,12 @@
+.markdown-preview-view, 
+.markdown-source-view {
+    .el-blockquote {
+        background: var(--background-secondary);
+
+        blockquote {
+            border-inline-start: 2px solid var(--blockquote-border-color);
+            padding: var(--size-4-2) var(--size-4-4);
+            color: var(--text-muted);
+        }
+    }
+}

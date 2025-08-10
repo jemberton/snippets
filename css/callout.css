@@ -1,0 +1,32 @@
+.callout[data-callout] {
+    /* border: 2px dashed rgba(var(--callout-color), 0.5); */
+    --callout-border-width: 2px;
+    border-style: dashed;
+}
+
+.callout[data-callout="wip"] {
+    --callout-color: var(--color-orange-rgb);
+    --callout-icon: lucide-notepad-text-dashed;
+}
+
+.callout[data-callout="terminal"] {
+    --callout-color: var(--callout-quote);
+    --callout-icon: lucide-square-terminal;
+    --callout-blend-mode: normal;
+}
+
+.theme-light {
+    .callout[data-callout="terminal"] {
+        background: #222222;
+        color: #dddddd;
+        border-color: #000000;
+    }
+}
+
+.theme-dark {
+    .callout[data-callout="terminal"] {
+        background: #111111;
+        color: #bbbbbb;
+        border-color: #000000;
+    }
+}

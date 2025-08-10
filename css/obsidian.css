@@ -1,16 +1,14 @@
-/*.markdown-source-view, .markdown-preview-view {
-    max-width: 90%;
-    margin: auto;
-}*/
-
-.markdown-preview-sizer, .cm-sizer {
+.markdown-preview-sizer,
+.cm-sizer {
     --custom-readable-width: 80%;
 
     max-width: var(--custom-readable-width) !important;
     width: var(--custom-readable-width) !important;
 }
 
-.cm-contentContainer, .cm-content, .cm-line {
+.cm-contentContainer,
+.cm-content,
+.cm-line {
     max-width: 100% !important;
     width: 100% !important;
 }
@@ -27,6 +25,7 @@
     background: var(--background-modifier-active-hover);
 }
 
-.HyperMD-list-line, .HyperMD-quote {
+.HyperMD-list-line,
+.HyperMD-quote {
     text-indent: 0 !important;
 }

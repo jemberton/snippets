@@ -7,7 +7,8 @@
         color: var(--color-red);
     }
     
-    strong em, em strong {
+    strong em,
+    em strong {
         color: var(--color-orange);
     }
     
