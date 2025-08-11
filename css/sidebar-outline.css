@@ -1,0 +1,126 @@
+/*============================================================================*/
+/* Outline: global                                                            */
+/*============================================================================*/
+:root {
+    --nav-indentation-guide-color: rgba(var(--color-red-rgb), 0.7);
+}
+
+.workspace-leaf-content[data-type="outline"] .tree-item-self {
+	border-left: 2px solid transparent;
+	border-radius: 0px;
+}
+
+.workspace-leaf-content[data-type="outline"] .tree-item-self.is-active {
+    /* color: var(--nav-item-color-active);
+    background-color: transparent;
+    border-left: 2px solid;
+    border-radius: 0; */
+
+    color: var(--nav-item-color-active) !important;
+    background-color: rgb(from var(--background-primary) r g b / 0.8);
+    border-left: 2px solid rgb(from var(--interactive-accent) r g b / 1.0);
+    border-radius: 0;
+
+    .tree-item-inner {
+        color: var(--nav-item-color-active) !important;
+    }
+}
+
+[data-type="outline"] {
+    .tree-item {
+        :has(+ .tree-item-children .tree-item) {
+            color: var(--color-red);
+        }
+
+        .tree-item-children .tree-item {
+            /* .tree-item-self .tree-item-inner, .tree-item-self .tree-item-icon {
+                color: var(--color-orange);
+            } */
+
+            :has(+ .tree-item-children .tree-item) {
+                color: var(--color-orange);
+            }
+
+            .tree-item-children .tree-item {
+                /* .tree-item-self .tree-item-inner, .tree-item-self .tree-item-icon {
+                    color: var(--color-yellow);
+                } */
+
+                :has(+ .tree-item-children .tree-item) {
+                    color: var(--color-yellow);
+                }
+
+                .tree-item-children .tree-item {
+                    /* .tree-item-self .tree-item-inner, .tree-item-self .tree-item-icon {
+                        color: var(--color-green);
+                    } */
+
+                    :has(+ .tree-item-children .tree-item) {
+                        color: var(--color-green);
+                    }
+
+                    .tree-item-children .tree-item {
+                        /* .tree-item-self .tree-item-inner, .tree-item-self .tree-item-icon {
+                            color: var(--color-blue);
+                        } */
+
+                        :has(+ .tree-item-children .tree-item) {
+                            color: var(--color-blue);
+                        }
+
+                        .tree-item-children .tree-item {
+                            .tree-item-self .tree-item-inner, .tree-item-self .tree-item-icon {
+                                color: var(--color-purple);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .tree-item-children {
+        border-left: 1px dashed var(--color-red);
+
+        .tree-item-children {
+            border-left: 1px dashed var(--color-orange);
+
+            .tree-item-children {
+                border-left: 1px dashed var(--color-yellow);
+
+                .tree-item-children {
+                    border-left: 1px dashed var(--color-green);
+
+                    .tree-item-children {
+                        border-left: 1px dashed var(--color-blue);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*============================================================================*/
+/* Outline: colors                                                           */
+/*============================================================================*/
+/* .theme-light {
+	--nav-indentation-guide-color: rgba(var(--color-red-rgb), 0.2);
+	
+	.workspace-leaf-content[data-type="outline"] .tree-item-self.is-active {
+		color: var(--nav-item-color-active) !important;
+		background-color: rgb(from var(--background-primary) r g b / 0.8);
+		border-left: 2px solid rgb(from var(--interactive-accent) r g b / 1.0);
+		border-radius: 0;
+	}
+}
+
+.theme-dark {
+	--nav-indentation-guide-color: rgba(var(--color-red-rgb), 0.7);
+	
+	.workspace-leaf-content[data-type="outline"] .tree-item-self.is-active {
+		color: var(--nav-item-color-active) !important;
+		background-color: rgb(from var(--background-primary) r g b / 0.8);
+		border-left: 2px solid rgb(from var(--interactive-accent) r g b / 1.0);
+		border-radius: 0;
+	}
+} */

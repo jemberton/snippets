@@ -26,6 +26,8 @@
 }
 
 .HyperMD-list-line,
-.HyperMD-quote {
+.HyperMD-quote,
+.HyperMD-callout,
+.cm-line {
     text-indent: 0 !important;
 }

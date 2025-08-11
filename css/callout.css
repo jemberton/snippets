@@ -13,20 +13,207 @@
     --callout-color: var(--callout-quote);
     --callout-icon: lucide-square-terminal;
     --callout-blend-mode: normal;
+
+    background: #111111;
+    color: #bbbbbb;
+    border-color: #000000;
 }
 
-.theme-light {
-    .callout[data-callout="terminal"] {
-        background: #222222;
-        color: #dddddd;
-        border-color: #000000;
+.callout[data-callout="fixme"] {
+    --callout-color: var(--color-red-rgb);
+    --callout-icon: lucide-circle-alert;
+}
+
+.callout[data-callout="ghost"] {
+    --callout-color: var(--callout-quote);
+    --callout-icon: lucide-ghost;
+}
+
+.callout[data-callout="calendar"] {
+    --callout-color: var(--color-purple-rgb);
+    --callout-icon: lucide-calendar-clock;
+}
+
+/* Inline callouts --> for callouts that end in ":" */
+.callout[data-callout$=":"] {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: var(--size-4-2) var(--size-4-4);
+    margin: 0;
+    margin-block-start: var(--size-4-2);
+    margin-block-end: var(--size-4-2);
+
+    .callout-title {
+        line-height: var(--line-height-normal);
+
+        .callout-inner-title {}
+
+        .callout-icon {
+            svg {}
+        }
+    }
+
+    .callout-content {
+        p {
+            margin: 0;
+            margin-inline-start: var(--size-4-2);
+        }
+    }
+
+    &[data-callout="inline:"] {
+        --callout-icon: lucide-chevrons-left-right-ellipsis;
+    }
+
+    &[data-callout="part:"] {
+        --callout-color: var(--color-pink-rgb);
+        --callout-icon: lucide-puzzle;
+    }
+
+    &[data-callout="key:"] {
+        --callout-color: var(--color-cyan-rgb);
+        --callout-icon: lucide-key-round;
+
+        .callout-content {
+            transition: filter 0.25s;
+            filter: blur(0) grayscale(0);
+    
+            &:not(:hover) {
+                filter: blur(0.3rem) grayscale(80%);
+            }
+        }
     }
 }
 
-.theme-dark {
-    .callout[data-callout="terminal"] {
+/* Bookmarks (marks) */
+.callout[data-callout^="mark"] {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: var(--size-4-2) var(--size-4-4);
+    margin: 0;
+    margin-block-start: var(--size-4-2);
+    margin-block-end: var(--size-4-2);
+
+    --callout-color: var(--color-red-rgb);
+    --callout-icon: lucide-bookmark;
+
+    .callout-title {
+        line-height: var(--line-height-normal);
+
+        .callout-inner-title {}
+
+        .callout-icon {
+            svg {}
+        }
+    }
+
+    .callout-content {
+        p {
+            margin: 0;
+            margin-inline-start: var(--size-4-2);
+        }
+    }
+
+    &::before {
+		content: "";
+		background: transparent;
+		display: flex;
+		position: absolute;
+		left: 0;
+        line-height: var(--line-height-normal);
+		
+		--c: rgba(var(--color-red-rgb), 0.8);
+
+		border-image: conic-gradient(from 45deg at calc(100% - 1.5rem),#0000 25%,var(--c) 0) fill 0//0 0 0 100vw;
+		padding-right: 1.3em;
+		width: 1rem;
+		height: 2rem;
+	}
+
+    &[data-callout$=".red"] {
+        --callout-color: var(--color-red-rgb);
+
+        &::before {
+            --c: rgba(var(--callout-color), 0.8);
+        }
+    }
+
+    &[data-callout$=".yellow"] {
+        --callout-color: var(--color-yellow-rgb);
+
+        &::before {
+            --c: rgba(var(--callout-color), 0.8);
+        }
+    }
+
+    &[data-callout$=".orange"] {
+        --callout-color: var(--color-orange-rgb);
+
+        &::before {
+            --c: rgba(var(--callout-color), 0.8);
+        }
+    }
+
+    &[data-callout$=".green"] {
+        --callout-color: var(--color-green-rgb);
+
+        &::before {
+            --c: rgba(var(--callout-color), 0.8);
+        }
+    }
+
+    &[data-callout$=".blue"] {
+        --callout-color: var(--color-blue-rgb);
+
+        &::before {
+            --c: rgba(var(--callout-color), 0.8);
+        }
+    }
+
+    &[data-callout$=".purple"] {
+        --callout-color: var(--color-purple-rgb);
+
+        &::before {
+            --c: rgba(var(--callout-color), 0.8);
+        }
+    }
+
+    &[data-callout$=".pink"] {
+        --callout-color: var(--color-pink-rgb);
+
+        &::before {
+            --c: rgba(var(--callout-color), 0.8);
+        }
+    }
+
+    &[data-callout$=".dark"] {
+        --callout-color: var(--callout-quote);
+        --callout-icon: lucide-skull;
+        --callout-blend-mode: normal;
+
         background: #111111;
         color: #bbbbbb;
         border-color: #000000;
+
+        &::before {
+            --c: rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    &[data-callout$=".light"] {
+        --callout-color: var(--color-light-rgb);
+        --callout-icon: lucide-zap;
+        --callout-blend-mode: normal;
+
+        background: #eeeeee;
+        color: #333333;
+        border-color: #cccccc;
+
+        &::before {
+            --c: rgba(238, 238, 238, 0.8);
+        }
     }
 }

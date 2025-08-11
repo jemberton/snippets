@@ -1,0 +1,100 @@
+.metadata-container {
+    background: var(--background-secondary);
+    border-radius: var(--radius-m);
+    padding: 0;
+    border: 2px dashed var(--background-modifier-border-focus);
+	margin-bottom: 2rem;
+
+    .metadata-properties-heading {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0;
+        justify-content: start;
+        align-items: center;
+
+        .collapse-indicator {
+            background: var(--background-primary);
+            border-radius: var(--radius-s);
+            border: 2px solid var(--background-modifier-border-focus);
+            padding: 0 var(--size-4-1);
+            top: calc(var(--size-4-1) + 1px);
+            left: calc(calc(var(--size-4-4) * -1) + 2px);
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .metadata-properties-title {
+            margin-left: var(--size-4-2);
+            color: var(--text-normal);
+            padding: var(--size-4-1);
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .metadata-content {
+        margin: var(--size-4-4);
+
+        .metadata-properties {
+            .metadata-property {
+                .metadata-property-icon {}
+                .metadata-property-key {}
+                .metadata-property-value {}
+
+            }
+        }
+    }
+
+    &.is-collapsed {
+        padding-bottom: 0;
+        background: var(--background-primary);
+
+        .metadata-properties-heading {
+            .collapse-indicator {
+                border-color: var(--interactive-accent);
+            }
+
+            .metadata-properties-title {
+                margin-left: var(--size-4-2);
+                color: var(--text-faint);
+
+            }
+
+            &:hover {
+                .metadata-properties-title {
+                    color: var(--text-accent) !important;
+                }
+            }
+        }
+
+        /* &:hover {
+            border-color: var(--interactive-accent) !important;
+        } */
+    }
+}
+
+/* .theme-light {
+    .metadata-container {
+        .metadata-properties-heading {
+            .collapse-indicator {
+                background: var(--interactive-accent);
+            }
+        }
+    }
+}
+
+.theme-dark {
+    .metadata-container {
+        .metadata-properties-heading {
+            .collapse-indicator {
+                background: var(--interactive-accent);
+
+                svg { color: var(--background-primary); }
+            }
+        }
+    }
+} */

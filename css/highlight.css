@@ -1,0 +1,26 @@
+mark, .cm-formatting-highlight, .cm-highlight {
+    background: rgb(from var(--color-yellow) r g b / 1.0) !important;
+    color: var(--text-on-accent-inverted) !important;
+    display: inline-flex;
+    padding: 0 var(--size-4-1);
+}
+
+.markdown-preview-view {
+    mark, .cm-highlight {
+        border-radius: var(--radius-s);
+    }
+}
+
+span.cm-formatting.cm-formatting-highlight.cm-highlight {
+    border-radius: 0;
+
+    &:first-of-type {
+        border-top-left-radius: var(--radius-s);
+        border-bottom-left-radius: var(--radius-s);
+    }
+
+    &:last-of-type {
+        border-top-right-radius: var(--radius-s);
+        border-bottom-right-radius: var(--radius-s);
+    }
+}
