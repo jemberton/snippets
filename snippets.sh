@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-clear
+# clear
 echo "----------------------------------------"
 echo "Obsidian CSS Snippets Tool"
 echo "----------------------------------------"

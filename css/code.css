@@ -1,0 +1,72 @@
+/* color-mix(in srgb, var(--background-primary), #000 5%) */
+
+p code,
+.cm-inline-code {
+    background: var(--background-secondary) !important;
+    border: 1px solid var(--background-modifier-border) !important;
+    padding-bottom: 0 !important;
+}
+
+.cm-inline-code {
+    background: var(--background-secondary) !important;
+    /* border-color: red !important; */
+    border: none !important;
+
+    /* &:nth-of-type(n) {
+        border-right: none !important;
+    }
+
+    &:nth-of-type(2n) {
+        border-left: none !important;
+        border-right: none !important;
+    }
+
+    &:nth-of-type(3n) {
+        border-left: none !important;
+    } */
+}
+
+.el-pre {
+    pre {
+        padding-top: calc(var(--input-height) + calc(var(--size-2-3) * 2 + var(--size-2-3)));
+        border: 1px solid var(--background-modifier-border);
+
+        --overlay-text: "plaintext";
+
+        &::before {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            background: var(--background-primary);
+            content: var(--overlay-text);
+            left: 0;
+            top: 0;
+            right: 0;
+            height: var(--input-height);
+            justify-content: start;
+            align-items: center;
+            padding: var(--size-2-3) var(--size-4-4);
+            margin: 0;
+            max-width: 100%;
+            border-bottom: 1px solid var(--background-modifier-border);
+            font-size: var(--font-smaller);
+            color: var(--text-muted);
+        }
+
+        &.language-json { --overlay-text: 'JSON'; }
+        &.language-python { --overlay-text: 'Python'; }
+        &.language-cpp { --overlay-text: 'C++'; }
+        &.language-javascript { --overlay-text: 'Javascript'; }
+        &.language-js { --overlay-text: 'Javascript'; }
+
+        code {
+            &.language-json {}
+        }
+    }
+}
+
+/* .HyperMD-codeblock
+.HyperMD-codeblock-begin
+.HyperMD-codeblockbegin-bg
+.HyperMD-codeblock-begin
+.cm-line */

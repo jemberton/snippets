@@ -99,28 +99,3 @@
         }
     }
 }
-
-/*============================================================================*/
-/* Outline: colors                                                           */
-/*============================================================================*/
-/* .theme-light {
-	--nav-indentation-guide-color: rgba(var(--color-red-rgb), 0.2);
-	
-	.workspace-leaf-content[data-type="outline"] .tree-item-self.is-active {
-		color: var(--nav-item-color-active) !important;
-		background-color: rgb(from var(--background-primary) r g b / 0.8);
-		border-left: 2px solid rgb(from var(--interactive-accent) r g b / 1.0);
-		border-radius: 0;
-	}
-}
-
-.theme-dark {
-	--nav-indentation-guide-color: rgba(var(--color-red-rgb), 0.7);
-	
-	.workspace-leaf-content[data-type="outline"] .tree-item-self.is-active {
-		color: var(--nav-item-color-active) !important;
-		background-color: rgb(from var(--background-primary) r g b / 0.8);
-		border-left: 2px solid rgb(from var(--interactive-accent) r g b / 1.0);
-		border-radius: 0;
-	}
-} */

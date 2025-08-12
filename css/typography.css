@@ -1,18 +1,23 @@
 .markdown-preview-view, .markdown-source-view {
-    em {
+    em,
+    .cm-em {
         color: var(--color-green);
     }
     
-    strong {
+    strong,
+    .cm-strong {
         color: var(--color-red);
     }
     
     strong em,
-    em strong {
+    em strong,
+    .cm-strong.cm-em,
+    .cm-em.cm-strong {
         color: var(--color-orange);
     }
     
-    del {
+    del,
+    .cm-strikethrough {
         filter: saturate(0.5) opacity(0.5);
     }
 }
