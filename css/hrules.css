@@ -1,0 +1,78 @@
+.markdown-reading-view hr { margin: var(--size-4-8) 0; }
+
+.hr-dashed {
+    --c: var(--background-modifier-border);
+
+    border: none !important;
+    height: var(--size-4-1);
+    background-image: linear-gradient(to right, var(--c) var(--size-2-2), rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: var(--size-4-2) var(--size-2-1);
+    background-repeat: repeat-x;
+}
+
+.hr-dots {
+    --c: var(--background-modifier-border);
+
+    border: none !important;
+    height: var(--size-4-2);
+    background-image: linear-gradient(to right, var(--c) 0.3rem, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 2rem 0.3rem;
+    background-repeat: repeat-x;
+}
+
+.hr-fancy {
+    --top: var(--background-modifier-hover);
+    --bottom: color-mix(in srgb, var(--background-primary), #000 20%);
+    --symbol: var(--text-faint);
+
+    border-top: 2px solid var(--top) !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: 2px solid var(--bottom) !important;
+    text-align: center;
+    overflow: visible;
+    height: 0px;
+    margin: var(--size-4-8) 0 !important;
+
+    &::after {
+        content: "§";
+        font: var(--font-monospace-theme);
+        position: relative;
+        display: inline-flex;
+        background: var(--background-primary);
+        color: var(--symbol);
+        padding: var(--size-2-1) var(--size-4-4);
+        font-size: 2.0em;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        transform: translateY(-50%);
+        line-height: var(--line-height-normal);
+    }
+}
+
+.hr-rainbow {
+    --r: var(--color-red);
+    --o: var(--color-orange);
+    --y: var(--color-yellow);
+    --g: var(--color-green);
+    --b: var(--color-cyan);
+    --i: var(--color-blue);
+    --v: var(--color-purple);
+
+    border: none !important;
+    height: var(--size-4-1);
+    background-image: repeating-linear-gradient(to right,
+        var(--r) 0px, var(--r) 14.3%,
+        var(--o) 14.3%, var(--o) 28.6%,
+        var(--y) 28.6%, var(--y) 42.9%,
+        var(--g) 42.9%, var(--g) 57.2%,
+        var(--b) 57.2%, var(--b) 71.5%,
+        var(--i) 71.5%, var(--i) 85.8%,
+        var(--v) 85.8%, var(--v) 100%
+    );
+    background-size: 100%;
+    background-repeat:no-repeat;
+}

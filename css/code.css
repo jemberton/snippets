@@ -58,6 +58,12 @@ p code,
         &.language-cpp { --overlay-text: 'C++'; }
         &.language-javascript { --overlay-text: 'Javascript'; }
         &.language-js { --overlay-text: 'Javascript'; }
+        &.language-yaml { --overlay-text: 'YAML'; }
+        &.language-ts { --overlay-text: 'Typescript'; }
+        &.language-typescript { --overlay-text: 'Typescript'; }
+        &.language-csharp { --overlay-text: 'C#'; }
+        &.language-java { --overlay-text: 'Java'; }
+        &.language-cobol { --overlay-text: 'COBOL'; }
 
         code {
             &.language-json {}
