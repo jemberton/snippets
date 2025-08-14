@@ -1,0 +1,46 @@
+body {
+    --bgTable: var(--background-primary);
+    --bgTHead: rgb(from var(--interactive-accent) r g b / 0.2);
+    --bgTHRow: "";
+    --bgTBody: "";
+    --bgTBRow: var(--background-secondary);
+    --bgTBRowAlt: var(--background-primary);
+  
+    --borderTH: var(--background-modifier-border);
+    --borderTCell: var(--background-modifier-border);
+  
+    --colorHeader: var(--text-normal);
+  }
+  
+  table {
+      margin: var(--size-4-2) 0 !important;
+      background: var(--bgTable) !important;
+      border-bottom: 1px solid var(--borderTH) !important;
+  
+      thead {
+          tr {
+              th {
+                  background: var(--bgTHead) !important;
+                  color: var(--colorHeader) !important;
+                  padding: 0.5rem !important;
+  
+                  border-color: var(--borderTH) !important;
+              }
+          }
+      }
+  
+      tbody {
+          tr {
+            background: var(--bgTBRow) !important;
+            
+            td {
+              border-color: var(--borderTCell) !important;
+              padding: 0.5rem !important;
+            }
+  
+            &:nth-child(even) {
+              background: var(--bgTBRowAlt) !important;
+            }
+          }
+      }
+  }

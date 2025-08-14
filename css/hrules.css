@@ -23,8 +23,8 @@
 }
 
 .hr-fancy {
-    --top: var(--background-modifier-hover);
-    --bottom: color-mix(in srgb, var(--background-primary), #000 20%);
+    --bottom: var(--background-modifier-hover);
+    --top: color-mix(in srgb, var(--background-primary), #000 20%);
     --symbol: var(--text-faint);
 
     border-top: 2px solid var(--top) !important;

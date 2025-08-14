@@ -1,5 +1,5 @@
 .metadata-container {
-    background: var(--background-secondary);
+    background: var(--background-primary-alt);
     border-radius: var(--radius-m);
     padding: 0;
     border: 2px dashed var(--background-modifier-border-focus);
