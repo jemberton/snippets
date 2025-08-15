@@ -11,6 +11,8 @@ This is a note that is used to test themes, custom CSS, plugins, and anything el
 
 This note also serves as a manual on using each of the elements displayed. It is easy to switch between the editor/source view and the reading view to see how the element was generated and how it will appear when rendered!
 
+Before you jump into all the content of this note, it is worth mentioning the [Obsidian Help](https://help.obsidian.md/) site. It is incredibly helpful when you have questions about *how* ... to do something in your note. The community forum and support pages are worth a view as well.
+
 ***
 
 # Headings
@@ -43,6 +45,13 @@ Obsidian can support a variety of typography features. Text can be shown in:
 - **~~bold strikethrough~~**
 - ***~~bold italic strikethrough~~***
 
+> [!note]
+> You might wonder, "what about underline"?
+> 
+> Historically in print, underlined text might have been used to create emphasis. This was used largely due to typewriters not having keys specific for italic characters. Typewriters *did* have the ability to underline. Italic characters would have required an entire extra set of keys.
+> 
+> In the modern digital world, it is much easier to make text bold, italic, colored, etc ... This combined with the common use of underlines representing links, meant that we interpret underline with a different context compared to print. For this, the Markdown specification does *not* feature underline for typography.
+
 ## Superscript & Subscript
 
 Obsidian does not support superscripts and subscripts natively. This feature is provided by the [LaTeX Suite](https://github.com/artisticat1/obsidian-latex-suite) plugin. If you do not have it enabled, you can ignore this section!
@@ -58,6 +67,9 @@ These examples are but only a small demonstration. Consult the LaTeX documentati
 # Abbreviations
 
 Abbreviations and acronyms are provided via the plugin [Abbreviations and Acronyms](https://github.com/dragonish/obsidian-abbreviations). If you look in the note's metadata/properties, you can see the syntax for the abbreviations. Something like HTML or CSS. Just hover over those terms and the tooltip will be the definition.
+
+> [!warning]
+> At the time of writing, the plugin is at v1.7.2 and exhibits a strange behavior. When checking a task in a list, the screen scrolls away from the object being clicked. It seems to be related to this plugin. The vault was tested using the default theme, with no other plugins or CSS customizations applied. The behavior is not present with the plugin disabled!
 
 ***
 
@@ -202,7 +214,7 @@ The custom Callouts above can be folded too (even the Inline Callouts)!
 
 ## Nesting Callouts
 
-All Callouts can be nested within another.
+All Callouts can be nested within another (most elements in Obsidian can be nested).
 
 > [!info]
 > Here is an `info` callout with a nested callout.
@@ -213,17 +225,37 @@ All Callouts can be nested within another.
 
 # Code
 
+Code and code blocks are essential elements for a number of documents. Obsidian supports inline code and code blocks.
+
+An example of `inline code` is seen here. The text is formatted and parsed differently than standard text. Take a **bold** bit of text and put in an inline code element. Something like `**bold**` this.
+
+Code blocks are meant for multi-line code or text. They also support language-specific syntax highlighting. For example, here is some JSON vs plaintext:
+
+```json
+{
+	"first_key": "first_value",
+	"second_key": "second_value"
+}
+```
+
+```
+{
+	"first_key": "first_value",
+	"second_key": "second_value"
+}
+```
+
 ***
 
 # Emojis
 
-Emojis are supported, but not the friendliest to use. On Windows, you can press <kbd>WIN + .</kbd> to open the emoji selector. Emoji shortcodes are provided by [Emoji Autocomplete](https://github.com/KraXen72/obsidian-emoji-autocomplete).
-
-Simple smileys like ❤️ and 😄 are easy enough to add!
+Emojis are supported, but not the friendliest to use. On Windows, you can press <kbd>WIN + .</kbd> to open the emoji selector. Emoji shortcodes are provided by [Emoji Autocomplete](https://github.com/KraXen72/obsidian-emoji-autocomplete). Simple smileys like ❤️ and 😄 are easy enough to add by typing something like `:heart:`!
 
 ***
 
 # Footnotes
+
+Footnotes are supported in Obsidian[^1]. Just use the basic syntax `[^1]` to establish the footnote (replacing the number for the correct reference). After making the footnote reference, a dialog pops up allowing you to enter the content for the footnote. Obsidian then sends the content to the bottom of the note!
 
 ***
 
@@ -235,9 +267,35 @@ Sometimes it can be helpful to highlight certain text. ==This is a very importan
 
 # Horizontal Rules
 
+Horizontal Rules can help make the document more readable by separating sections of a note. The basic rule is good, but leaves a little to be desired. Unfortunately, there is no easy way to add new rules without a plugin. This means any custom rules have to be created in HTML.
+
+## Dashed
+
+<hr class="hr-dashed"/>
+
+## Dots
+
+<hr class="hr-dots"/>
+
+## Fancy
+
+<hr class="hr-fancy"/>
+
+## Rainbow
+
+<hr class="hr-rainbow"/>
+
 ***
 
 # Images
+
+> [!mark.yellow] Styling needed
+
+Not all content is text, lists, tables, and links! Sometimes you need/want to add an image of something. This is easy to do in Obsidian. You can copy and paste an image directly into the note and Obsidian will add it to your vault in an attachments folder. You can drag and drop instead. You can also directly add files into the vault and manually link to it. As always, check the [Obsidian Help - Images](https://help.obsidian.md/style-guide#Images) page for more information. Here is an example:
+
+![[Pasted image 20250813213557.png | Obsidian]]
+
+You can add captions and alternate text if you use a plugin like [Image Captions](https://github.com/alangrainger/obsidian-image-captions).
 
 ***
 
@@ -251,11 +309,40 @@ Unfortunately, Markdown does not have a common/standard way to add keyboard elem
 
 # Links
 
+Links are pretty important! They can make it easier to navigate between notes, send the reader to external reference sites, provide context and resources without making the note bigger, etc ... Of course, there *is* a proper way to use links. Check the [Obsidian documentation](https://help.obsidian.md/links) for more information.
+
+## Internal
+
+Internal links are those that do *not* reach outside of Obsidian. They link to other files and notes within the vault or file system. They can be either the traditional Markdown syntax or the Wikilinks format. Here are some examples of internal links (they all link to *this* note and they are all in the Wikilinks format).
+
+- [[Obsidian Test Note]]
+- [[Obsidian Test Note | Alternate Name for Obsidian Test Note]]
+- [[Obsidian Test Note#Links]]
+
+Notice how all of the links do *not* have the "external" icon next to them. You may also notice that when you hover an internal link you are given a preview of the file/note! That makes things easier when reading through a dense document. You never have to leave the note you're in to see the file or note being linked!
+
+## External
+
+External links redirect the user to the address linked. Anything on the web or outside of Obsidian is considered external. They use the Markdown link format always. Here are some examples (all links below will redirect you to the Obsidian Help page on links):
+
+- [Obsidian Help - Links](https://help.obsidian.md/links)
+- [Obsidian Help - Links - Supported formats for internal links](https://help.obsidian.md/links#Supported+formats+for+internal+links)
+
+Notice how both links have an icon at the end? This is to let you know they are external.
+
+## Images
+
+> [!mark.yellow] Needs improvement
+
+Images can also be made into links. See the [[Obsidian Test Note#Images]] section above for more information on how to add images. Here is a very simple example of an image (from the [[Obsidian Test Note#Images | Images]] section above) that is also a link:
+
+[![[Pasted image 20250813213557.png | Obsidian]]](https://help.obsidian.md/style-guide#Images)
+
 ***
 
 # Lists
 
-Lists are supported in Obsidian. They can be unordered or ordered.
+Lists are supported in Obsidian. They can be unordered (no numbers) or ordered (numbers). Lists can also be nested within lists or other elements.
 
 ## Unordered
 
@@ -271,6 +358,93 @@ Lists are supported in Obsidian. They can be unordered or ordered.
 3. Third list item
 4. Fourth list item
 
+## Nested
+
+1. Start with a list (ordered or unordered)
+	1. Then add a new item but tabbed over
+	2. A second item
+2. Then <kbd>SHIFT + TAB</kbd> to go back to the original list
+
+## Check Lists
+
+Obsidian also supports a special kind of list, the check/task list! This is still just a list, but with an interactive box that can be checked/unchecked in the reader view. The syntax is a minor change to a traditional unordered or ordered list. Look at these examples:
+
+- [ ] First unordered task
+- [ ] Second unordered task
+
+1. [ ] First ordered task
+2. [ ] Second ordered task
+3. [ ] Third ordered task
+
+> [!note]
+> Look at the note in reader view and source view to see the difference between a completed task and one that is not. The state of the task can be changed in either view rather simply!
+
+## Fancy Lists
+
+The fancy list items are possible through custom CSS. If you are using vanilla Obsidian (no plugins or custom CSS snippets), you won't have support for these. They will appear and behave as normal task/list items. If you use a theme or have custom CSS snippets that support them, they'll appear and behave a bit differently!
+
+### Interactive Checkboxes
+
+- [ ] Normal checkbox
+- [x] Completed checkbox
+
+### Icons only
+
+- [/] Incomplete icon
+- [-] Canceled icon
+- [>] Forwarded icon
+- [<] Scheduling (calendar) icon
+- [?] Question icon
+- [!] Important icon
+- [*] Star icon
+- ["] Quote icon
+- [l] Location icon
+- [b] Bookmark icon
+- [i] Information icon
+- [S] Savings (money) icon
+- [I] Idea (lightbulb) icon
+- [p] Pros (thumbs up) icon
+- [c] Cons (thumbs down) icon
+- [f] Fire icon
+- [k] Key icon
+- [w] Win (cake) icon
+- [u] Up (trend up) icon
+- [d] Down (trend down) icon
+
+### Speech Bubbles
+
+> [!mark.red] Speech bubbles need all work done!
+
+- [0] Speech 0
+- [1] Speech 1
+- [2] Speech 2
+- [3] Speech 3
+- [4] Speech 4
+- [5] Speech 5
+- [6] Speech 6
+- [7] Speech 7
+- [8] Speech 8
+- [9] Speech 9
+
 ***
 
 # Tables
+
+Tables in Markdown are a bit awkward at the best of times. A plugin like [Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian) can make a huge difference when editing tables. The idea is simple enough. Just make a text based table and Obsidian will render it into a nice looking table!
+
+| Header 1    | Header 2                          | Header 3 |
+| ----------- | --------------------------------- | -------- |
+| First Item  | Some value                        | 0        |
+| Second Item | Some more information can go here | 10       |
+| Third Item  | False                             | 20       |
+
+Unfortunately, things like merged columns and rows is not supported, but the syntax allows for column alignment. See the following table and view it in editor mode to see the difference.
+
+| Header 1                   | Header 2 |                     Header 3 |
+|:-------------------------- |:--------:| ----------------------------:|
+| First Item is left aligned |  Center  | This column is right aligned |
+| Second                     |    0     |                         See? | 
+
+The styling for tables is a bit bland in the default theme. If you want different colors or alternate row shading, you'll have to add some custom CSS.
+
+[^1]: See the docs for more information [here](https://help.obsidian.md/syntax#Footnotes)

@@ -1,0 +1,50 @@
+/* color-mix(in srgb, var(--background-primary), #000 10%) */
+
+body {
+    --figure-background: var(--background-primary-alt);
+}
+
+figure.image-captions-figure {
+    background: rgb(from var(--figure-background) r g b / 1.0) !important;
+    padding: 0;
+    margin: 0;
+    border: none;
+
+    figcaption.image-captions-caption {
+        background: rgb(from var(--figure-background) r g b / 1.0) !important;
+        color: rgb(from var(--text-normal) r g b / 1.0) !important;
+        border-bottom: 2px dashed rgb(from var(--background-modifier-border-focus) r g b / 0.2);
+        padding: 0.5rem 1rem;
+    }
+}
+
+.external-link:has(figure) {
+    text-decoration: none !important;
+    background-image: none;
+
+    figure.image-captions-figure {
+        &:hover { 
+            figcaption.image-captions-caption {
+                    border-color: var(--link-external-color-hover);
+            }
+        }
+    }
+    
+    figcaption.image-captions-caption {
+        color: inherit !important;
+    }
+}
+
+.external-link:has(img) {
+    background-image: none;
+    
+    img {
+        border: 2px dashed transparent;
+    }
+
+    &:hover {
+        img {
+            border-color: var(--link-external-color);
+        }
+    }
+}
