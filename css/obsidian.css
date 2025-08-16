@@ -31,3 +31,9 @@
 .cm-line {
     text-indent: 0 !important;
 }
+
+.markdown-reading-view {
+    p {
+        text-align: justify;
+    }
+}

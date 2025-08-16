@@ -7,7 +7,7 @@ abbr:
  - "CSS: Cascading Stylesheet"
 ---
 
-This is a note that is used to test themes, custom CSS, plugins, and anything else you might use in Obsidian. Use this note to showcase all the elements used in Obsidian Markdown! Feel free to add anything to this note and keep it in your vault for the future!
+This is a note that is used to test themes (built for universal), custom CSS, plugins, and anything else you might use in Obsidian. Use this note to showcase all the elements used in Obsidian Markdown! Feel free to add anything to this note and keep it in your vault for the future! It can be used in light and/or dark themes!
 
 This note also serves as a manual on using each of the elements displayed. It is easy to switch between the editor/source view and the reading view to see how the element was generated and how it will appear when rendered!
 
@@ -289,13 +289,13 @@ Horizontal Rules can help make the document more readable by separating sections
 
 # Images
 
-> [!mark.yellow] Styling needed
-
 Not all content is text, lists, tables, and links! Sometimes you need/want to add an image of something. This is easy to do in Obsidian. You can copy and paste an image directly into the note and Obsidian will add it to your vault in an attachments folder. You can drag and drop instead. You can also directly add files into the vault and manually link to it. As always, check the [Obsidian Help - Images](https://help.obsidian.md/style-guide#Images) page for more information. Here is an example:
 
-![[Pasted image 20250813213557.png | Obsidian]]
+![[Pasted image 20250813213557.png]]
 
-You can add captions and alternate text if you use a plugin like [Image Captions](https://github.com/alangrainger/obsidian-image-captions).
+You can add captions and alternate text if you use a plugin like [Image Captions](https://github.com/alangrainger/obsidian-image-captions). Something like this ...
+
+![[Pasted image 20250813213557.png | With a caption]]
 
 ***
 
@@ -330,11 +330,13 @@ External links redirect the user to the address linked. Anything on the web or o
 
 Notice how both links have an icon at the end? This is to let you know they are external.
 
-## Images
-
-> [!mark.yellow] Needs improvement
+## With Images
 
 Images can also be made into links. See the [[Obsidian Test Note#Images]] section above for more information on how to add images. Here is a very simple example of an image (from the [[Obsidian Test Note#Images | Images]] section above) that is also a link:
+
+[![[Pasted image 20250813213557.png]]](https://help.obsidian.md/style-guide#Images)
+
+... and with a caption ...
 
 [![[Pasted image 20250813213557.png | Obsidian]]](https://help.obsidian.md/style-guide#Images)
 

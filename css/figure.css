@@ -1,20 +1,44 @@
 /* color-mix(in srgb, var(--background-primary), #000 10%) */
 
 body {
-    --figure-background: var(--background-primary-alt);
+    --figure-background: var(--background-secondary);
+    --img-border: 2px dashed rgb(from var(--background-modifier-border) r g b / 1.0);
+    --img-radius: var(--radius-m);
 }
 
-figure.image-captions-figure {
-    background: rgb(from var(--figure-background) r g b / 1.0) !important;
-    padding: 0;
-    margin: 0;
-    border: none;
+.image-embed {
+    img {
+        border: var(--img-border);
+        border-radius: var(--img-radius);
+    }
 
-    figcaption.image-captions-caption {
-        background: rgb(from var(--figure-background) r g b / 1.0) !important;
-        color: rgb(from var(--text-normal) r g b / 1.0) !important;
-        border-bottom: 2px dashed rgb(from var(--background-modifier-border-focus) r g b / 0.2);
-        padding: 0.5rem 1rem;
+    figure {
+        border-top-left-radius: var(--img-radius);
+        border-top-right-radius: var(--img-radius);
+
+        img {
+            border: none;
+            border-radius: 0px;
+            border-top-left-radius: var(--img-radius);
+            border-top-right-radius: var(--img-radius);
+        }
+
+        &.image-captions-figure {
+            background: var(--figure-background) !important;
+            padding: 0;
+            margin: 0;
+            border: var(--img-border);
+        
+            figcaption.image-captions-caption {
+                background: var(--figure-background) !important;
+                color: rgb(from var(--text-muted) r g b / 1.0) !important;
+                border: var(--img-border);
+                border-top: none;
+                padding: var(--size-4-2) var(--size-4-2);
+                border-bottom-left-radius: var(--img-radius);
+                border-bottom-right-radius: var(--img-radius);
+            }
+        }
     }
 }
 
@@ -24,8 +48,10 @@ figure.image-captions-figure {
 
     figure.image-captions-figure {
         &:hover { 
+            border-color: var(--link-external-color);
+
             figcaption.image-captions-caption {
-                    border-color: var(--link-external-color-hover);
+                    border-color: var(--link-external-color);
             }
         }
     }
@@ -38,10 +64,6 @@ figure.image-captions-figure {
 .external-link:has(img) {
     background-image: none;
     
-    img {
-        border: 2px dashed transparent;
-    }
-
     &:hover {
         img {
             border-color: var(--link-external-color);

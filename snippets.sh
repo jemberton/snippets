@@ -24,7 +24,7 @@ elif [[ "$1" == "update" ]]; then
     echo "Copying stylesheets from Obsidian vault to project ..."
     cp "$VAULT/$SNIPPETS"/*.css ./css
     # echo "Copying test note from Obsidian vault to project ..."
-    # cp "$VAULT/Obsidian\ Test\ Note.md" .
+    # cp "$VAULT"/Obsidian\ Test\ Note.md .
 
     echo "You should update the git repository."
     exit 0
