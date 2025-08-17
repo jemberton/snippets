@@ -60,7 +60,7 @@ Obsidian does not support superscripts and subscripts natively. This feature is 
 - $\large X^2 = 5 + 3$
 - $\large V_{\small RMS}^2$ or $\large V^2_{\small RMS}$
 
-These examples are but only a small demonstration. Consult the LaTeX documentation for more information. [Overleaf](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) has a good "30 minute" tutorial on learning LaTeX.
+These examples are only a small demonstration of the capabilities. Consult the LaTeX documentation for more information. [Overleaf](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes) has a good "30 minute" tutorial on learning LaTeX.
 
 ***
 
@@ -159,6 +159,14 @@ The following Callouts are custom inline Callouts. They are meant to be single l
 
 > [!key:]
 > This is a `key` inline callout. It becomes clear when you hover over the content.
+
+> [!note]
+> If you are using the `universal` snippets from my repository, The `key` callout also prevents copying the key when it is part of a larger selection of the document. Text in the key can be copied only when the content is being hovered. Keyboard shortcuts vs mouse interaction allows more control over *what* is copied.
+>
+> - Select some text inside the `key` callout, copy and paste it into a blank note (text file).
+> - If you are not hovering the content when you copy, it will not be selected.
+> - Select text before and after the `key` callout, copy and paste into the blank note.
+> - If you are not hovering the content of the `key` callout when you copy, it will not be selected.
 
 ### Marks
 
@@ -323,7 +331,7 @@ Notice how all of the links do *not* have the "external" icon next to them. You 
 
 ## External
 
-External links redirect the user to the address linked. Anything on the web or outside of Obsidian is considered external. They use the Markdown link format always. Here are some examples (all links below will redirect you to the Obsidian Help page on links):
+External links redirect the user to the address linked. Anything on the web or outside of Obsidian is considered external. They use the Markdown link format always. Here are some examples (all links below will redirect you to the Obsidian Help page on links or images):
 
 - [Obsidian Help - Links](https://help.obsidian.md/links)
 - [Obsidian Help - Links - Supported formats for internal links](https://help.obsidian.md/links#Supported+formats+for+internal+links)
@@ -367,18 +375,22 @@ Lists are supported in Obsidian. They can be unordered (no numbers) or ordered (
 	2. A second item
 2. Then <kbd>SHIFT + TAB</kbd> to go back to the original list
 
-## Check Lists
+## Checklists
 
 Obsidian also supports a special kind of list, the check/task list! This is still just a list, but with an interactive box that can be checked/unchecked in the reader view. The syntax is a minor change to a traditional unordered or ordered list. Look at these examples:
 
+### Unordered Checklist:
+
 - [ ] First unordered task
 - [ ] Second unordered task
+
+### Ordered Checklist:
 
 1. [ ] First ordered task
 2. [ ] Second ordered task
 3. [ ] Third ordered task
 
-> [!note]
+> [!tip]
 > Look at the note in reader view and source view to see the difference between a completed task and one that is not. The state of the task can be changed in either view rather simply!
 
 ## Fancy Lists
@@ -391,6 +403,8 @@ The fancy list items are possible through custom CSS. If you are using vanilla O
 - [x] Completed checkbox
 
 ### Icons only
+
+> [!mark.orange] Adding more custom list item icons
 
 - [/] Incomplete icon
 - [-] Canceled icon
@@ -412,21 +426,31 @@ The fancy list items are possible through custom CSS. If you are using vanilla O
 - [w] Win (cake) icon
 - [u] Up (trend up) icon
 - [d] Down (trend down) icon
+- [:] colon
+- [,] comma
+- [.] period
+- [+] plus
+- [=] equal
+- [~] Infinity icon
+- [C] Copyright icon
+- [z] Lightning bolt icon
+- [g] Git icon
+- [a] letter a
+- [@] at symbol
+- [m] Message icon
 
-### Speech Bubbles
+#### Numbers
 
-> [!mark.red] Speech bubbles need all work done!
-
-- [0] Speech 0
-- [1] Speech 1
-- [2] Speech 2
-- [3] Speech 3
-- [4] Speech 4
-- [5] Speech 5
-- [6] Speech 6
-- [7] Speech 7
-- [8] Speech 8
-- [9] Speech 9
+- [0] Number 0
+- [1] Number 1
+- [2] Number 2
+- [3] Number 3
+- [4] Number 4
+- [5] Number 5
+- [6] Number 6
+- [7] Number 7
+- [8] Number 8
+- [9] Number 9
 
 ***
 

@@ -76,11 +76,16 @@
         --callout-icon: lucide-key-round;
 
         .callout-content {
+            user-select: none !important;
             transition: filter 0.25s;
             filter: blur(0) grayscale(0);
     
             &:not(:hover) {
                 filter: blur(0.3rem) grayscale(80%);
+            }
+
+            &:hover {
+                user-select: text !important;
             }
         }
     }
@@ -113,6 +118,7 @@
     .callout-content {
         p {
             margin: 0;
+            padding: 0;
             margin-inline-start: var(--size-4-2);
         }
     }
