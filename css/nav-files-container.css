@@ -1,3 +1,21 @@
-/* .nav-files-container {
-    background: red;
-} */
+.nav-files-container {
+    .tree-item {
+        &.nav-folder {
+            background: grey !important;
+
+            .tree-item-icon {}
+            .tree-item-inner {
+                color: red !important;
+            }
+        }
+
+        &.nav-file {
+            background: darkgrey !important;
+
+            .tree-item-icon {}
+            .tree-item-inner {
+                color: red !important;
+            }
+        }
+    }
+}

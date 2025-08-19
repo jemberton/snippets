@@ -37,3 +37,9 @@
         text-align: justify;
     }
 }
+
+@media screen and (max-width: 767px) {
+    .markdown-preview-sizer, .cm-sizer {
+        --custom-readable-width: 100%;
+    }
+}
