@@ -7,6 +7,8 @@ abbr:
  - "CSS: Cascading Stylesheet"
 ---
 
+> [!mark.orange] Mobile support is a work in progress
+
 This is a note that is used to test themes (built for universal), custom CSS, plugins, and anything else you might use in Obsidian. Use this note to showcase all the elements used in Obsidian Markdown! Feel free to add anything to this note and keep it in your vault for the future! It can be used in light and/or dark themes!
 
 This note also serves as a manual on using each of the elements displayed. It is easy to switch between the editor/source view and the reading view to see how the element was generated and how it will appear when rendered!
@@ -418,7 +420,7 @@ The fancy list items are possible through custom CSS. If you are using vanilla O
 - [b] Bookmark icon
 - [i] Information icon
 - [S] Savings (money) icon
-- [I] Idea (lightbulb) icon
+- [I] Idea (light bulb) icon
 - [p] Pros (thumbs up) icon
 - [c] Cons (thumbs down) icon
 - [f] Fire icon
@@ -427,16 +429,18 @@ The fancy list items are possible through custom CSS. If you are using vanilla O
 - [u] Up (trend up) icon
 - [d] Down (trend down) icon
 - [:] colon
+- [;] semi-colon
 - [,] comma
 - [.] period
-- [+] plus
-- [=] equal
+- [+] Plus (add) icon
+- [=] Equal (similar) icon
 - [~] Infinity icon
 - [C] Copyright icon
 - [z] Lightning bolt icon
 - [g] Git icon
 - [a] letter a
-- [@] at symbol
+- [t] letter t 
+- [@] At icon
 - [m] Message icon
 
 #### Numbers
