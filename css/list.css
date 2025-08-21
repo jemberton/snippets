@@ -694,6 +694,31 @@ li[data-task="g"] {
     }
 }
 
+li[data-task="a"] {
+    > input[type=checkbox] {
+        &:checked {
+            --checkbox-color: transparent;
+            --checkbox-color-hover: transparent;
+            border-width: 0;
+    
+            &::before {
+                color: rgb(from var(--color-red) r g b);
+                margin: 0 3px;
+                position: absolute;
+                left: calc(var(--checkbox-size) * 1);
+                font-weight: bold;
+            }
+            
+            &::after {
+                -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.45887 2L1 6.01478L2.33826 7.50107L6.79713 3.48629L5.45887 2Z' fill='currentColor'/%3E%3Cpath d='M11 8H13V12H16V14H11V8Z' fill='currentColor'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12ZM5 12C5 8.13401 8.13401 5 12 5C15.866 5 19 8.13401 19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12Z' fill='currentColor'/%3E%3Cpath d='M18.5411 2L23 6.01478L21.6617 7.50107L17.2029 3.48629L18.5411 2Z' fill='currentColor'/%3E%3C/svg%3E");
+                -webkit-mask-size: var(--size-4-5);
+                background-color: rgb(from var(--color-red) r g b);
+                left: 0px;
+            }
+        }
+    }
+}
+
 li[data-task="t"] {
     > input[type=checkbox] {
         &:checked {

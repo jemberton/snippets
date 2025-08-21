@@ -7,6 +7,11 @@ abbr:
  - "CSS: Cascading Stylesheet"
 ---
 
+```dataview
+TABLE WITHOUT ID file.frontmatter AS Properties
+WHERE file.name = this.file.name
+```
+
 > [!mark.orange] Mobile support is a work in progress
 
 This is a note that is used to test themes (built for universal), custom CSS, plugins, and anything else you might use in Obsidian. Use this note to showcase all the elements used in Obsidian Markdown! Feel free to add anything to this note and keep it in your vault for the future! It can be used in light and/or dark themes!
@@ -406,8 +411,6 @@ The fancy list items are possible through custom CSS. If you are using vanilla O
 
 ### Icons only
 
-> [!mark.orange] Adding more custom list item icons
-
 - [/] Incomplete icon
 - [-] Canceled icon
 - [>] Forwarded icon
@@ -428,10 +431,6 @@ The fancy list items are possible through custom CSS. If you are using vanilla O
 - [w] Win (cake) icon
 - [u] Up (trend up) icon
 - [d] Down (trend down) icon
-- [:] colon
-- [;] semi-colon
-- [,] comma
-- [.] period
 - [+] Plus (add) icon
 - [=] Equal (similar) icon
 - [~] Infinity icon
@@ -459,6 +458,8 @@ The fancy list items are possible through custom CSS. If you are using vanilla O
 ***
 
 # Tables
+
+> [!mark.yellow] Consider changing colors for tables
 
 Tables in Markdown are a bit awkward at the best of times. A plugin like [Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian) can make a huge difference when editing tables. The idea is simple enough. Just make a text based table and Obsidian will render it into a nice looking table!
 
