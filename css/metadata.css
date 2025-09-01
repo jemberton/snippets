@@ -4,6 +4,7 @@
     padding: 0;
     border: 2px dashed var(--background-modifier-border-focus);
 	margin-bottom: 2rem;
+    transform: none !important;
 
     .metadata-properties-heading {
         display: flex;

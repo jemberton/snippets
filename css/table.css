@@ -12,35 +12,45 @@ body {
     --colorHeader: var(--text-normal);
   }
   
-  table {
-      margin: var(--size-4-2) 0 !important;
-      background: var(--bgTable) !important;
-      border-bottom: 1px solid var(--borderTH) !important;
-  
-      thead {
-          tr {
-              th {
-                  background: var(--bgTHead) !important;
-                  color: var(--colorHeader) !important;
-                  padding: 0.5rem !important;
-  
-                  border-color: var(--borderTH) !important;
-              }
-          }
+table {
+  margin: var(--size-4-2) 0 !important;
+  background: var(--bgTable) !important;
+  border-bottom: 1px solid var(--borderTH) !important;
+
+  thead {
+    tr {
+      th {
+        background: var(--bgTHead) !important;
+        color: var(--colorHeader) !important;
+        padding: 0.5rem !important;
+
+        border-color: var(--borderTH) !important;
       }
-  
-      tbody {
-          tr {
-            background: var(--bgTBRow) !important;
-            
-            td {
-              border-color: var(--borderTCell) !important;
-              padding: 0.5rem !important;
-            }
-  
-            &:nth-child(even) {
-              background: var(--bgTBRowAlt) !important;
-            }
-          }
-      }
+    }
   }
+
+  tbody {
+    tr {
+      background: var(--bgTBRow) !important;
+      
+      td {
+        border-color: var(--borderTCell) !important;
+        padding: 0.5rem !important;
+      }
+
+      &:nth-child(even) {
+        background: var(--bgTBRowAlt) !important;
+      }
+    }
+  }
+}
+
+.block-language-dataview {
+  margin: var(--size-4-4) 0;
+  border: 2px dashed var(--background-modifier-border-focus);
+  border-radius: var(--radius-m);
+
+  table.dataview {
+    margin: 0 !important;
+  }
+}
