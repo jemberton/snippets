@@ -64,6 +64,11 @@ p code,
         &.language-csharp { --overlay-text: 'C#'; }
         &.language-java { --overlay-text: 'Java'; }
         &.language-cobol { --overlay-text: 'COBOL'; }
+        &.language-sh { --overlay-text: 'Shell'; }
+        &.language-shell { --overlay-text: 'Shell'; }
+        &.language-bash { --overlay-text: 'Bash'; }
+        &.language-zsh { --overlay-text: 'ZSH'; }
+        &.language-asp { --overlay-text: 'ASP'; }
 
         code {
             &.language-json {}

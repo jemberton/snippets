@@ -457,9 +457,23 @@ The fancy list items are possible through custom CSS. If you are using vanilla O
 
 ***
 
-# Tables
+# Mermaid Charts & Diagrams
 
-> [!mark.yellow] Consider changing colors for tables
+> [!mark.red] Full implementation needed
+
+```mermaid
+	stateDiagram-v2
+	[*] --> Still
+	Still --> [*]
+	Still --> Moving
+	Moving --> Still
+	Moving --> Crash
+	Crash --> [*]
+```
+
+***
+
+# Tables
 
 Tables in Markdown are a bit awkward at the best of times. A plugin like [Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian) can make a huge difference when editing tables. The idea is simple enough. Just make a text based table and Obsidian will render it into a nice looking table!
 

@@ -1,6 +1,6 @@
 body {
     --bgTable: var(--background-primary);
-    --bgTHead: rgb(from var(--interactive-accent) r g b / 0.2);
+    --bgTHead: rgb(from var(--interactive-normal) r g b / 0.2);
     --bgTHRow: "";
     --bgTBody: "";
     --bgTBRow: var(--background-secondary);
