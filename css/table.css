@@ -1,17 +1,17 @@
 body {
-    --bgTable: var(--background-primary);
-    --bgTHead: rgb(from var(--interactive-normal) r g b / 0.2);
-    --bgTHRow: "";
-    --bgTBody: "";
-    --bgTBRow: var(--background-secondary);
-    --bgTBRowAlt: var(--background-primary);
-  
-    --borderTH: var(--background-modifier-border);
-    --borderTCell: var(--background-modifier-border);
-  
-    --colorHeader: var(--text-normal);
-  }
-  
+  --bgTable: var(--background-primary);
+  --bgTHead: rgb(from var(--interactive-normal) r g b / 0.2);
+  --bgTHRow: "";
+  --bgTBody: "";
+  --bgTBRow: var(--background-secondary);
+  --bgTBRowAlt: var(--background-primary);
+
+  --borderTH: var(--background-modifier-border);
+  --borderTCell: var(--background-modifier-border);
+
+  --colorHeader: var(--text-normal);
+}
+
 table {
   margin: var(--size-4-2) 0 !important;
   background: var(--bgTable) !important;
@@ -25,6 +25,7 @@ table {
         padding: 0.5rem !important;
 
         border-color: var(--borderTH) !important;
+        border-bottom-width: 2px !important;
       }
     }
   }
@@ -38,7 +39,7 @@ table {
         padding: 0.5rem !important;
       }
 
-      &:nth-child(even) {
+      &:nth-child(odd) {
         background: var(--bgTBRowAlt) !important;
       }
     }
@@ -47,10 +48,25 @@ table {
 
 .block-language-dataview {
   margin: var(--size-4-4) 0;
+  margin-bottom: var(--size-4-8);
   border: 2px dashed var(--background-modifier-border-focus);
   border-radius: var(--radius-m);
 
   table.dataview {
     margin: 0 !important;
+
+    thead.table-view-thead {
+      tr.table-view-tr-header {
+        th.table-view-th {
+          span {
+            font-size: var(--font-text-size);
+          }
+        }
+      }
+    }
+
+    li.dataview.dataview-li {
+      font-size: var(--font-small);
+    }
   }
 }
