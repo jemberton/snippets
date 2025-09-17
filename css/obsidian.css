@@ -18,7 +18,16 @@
 } */
 
 .cm-gutters {
-    margin-inline-end: 20px !important;
+    margin-inline-end: var(--size-4-6) !important;
+    background: var(--background-primary-alt) !important;
+}
+
+/* .cm-gutter {
+    padding-inline-end: var(--size-2-2) !important;
+} */
+
+.cm-gutterElement {
+    padding-inline-end: var(--size-2-3) !important;
 }
 
 .cm-active {
