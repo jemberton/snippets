@@ -13,24 +13,24 @@
     width: 100% !important;
 }
 
-.cm-line {
+/* .cm-line {
     padding-left: 20px !important;
-}
+} */
 
 .cm-gutters {
-    margin-inline-end: 0 !important;
+    margin-inline-end: 20px !important;
 }
 
 .cm-active {
     background: var(--background-modifier-active-hover);
 }
 
-.HyperMD-list-line,
+/* .HyperMD-list-line,
 .HyperMD-quote,
 .HyperMD-callout,
 .cm-line {
     text-indent: 0 !important;
-}
+} */
 
 .markdown-reading-view {
     p {
