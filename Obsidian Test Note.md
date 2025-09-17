@@ -8,7 +8,7 @@ abbr:
 ---
 
 ```dataview
-TABLE WITHOUT ID file.frontmatter AS Properties
+TABLE WITHOUT ID file.frontmatter AS "Note Properties"
 WHERE file.name = this.file.name
 ```
 
@@ -417,6 +417,7 @@ The fancy list items are possible through custom CSS. If you are using vanilla O
 - [<] Scheduling (calendar) icon
 - [?] Question icon
 - [!] Important icon
+- [.] Circle Check icon
 - [*] Star icon
 - ["] Quote icon
 - [l] Location icon
