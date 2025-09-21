@@ -21,10 +21,11 @@ if [[ "$1" == "copy" ]]; then
     echo "That's it! Update your settings in the Appearance section of your vault settings."
     exit 0
 elif [[ "$1" == "update" ]]; then
-    echo "Copying stylesheets from Obsidian vault to project ..."
-    cp "$VAULT/$SNIPPETS"/*.css ./css
-    # echo "Copying test note from Obsidian vault to project ..."
-    # cp "$VAULT"/Obsidian\ Test\ Note.md .
+    # echo "Copying stylesheets from Obsidian vault to project ..."
+    # cp "$VAULT/$SNIPPETS"/*.css ./css
+    echo "Copying test note from Obsidian vault to project ..."
+    cp "$VAULT"/Obsidian\ Test\ Note.md .
+    cp "$VAULT"/_assets/Pasted\ image\ 20250813213557.png ./_assets/Pasted\ image\ 20250813213557.png
 
     echo "You should update the git repository."
     exit 0

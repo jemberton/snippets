@@ -419,17 +419,15 @@ The fancy list items are possible through custom CSS. If you are using vanilla O
 - [!] Important icon
 - [.] Circle Check icon
 - [*] Star icon
+- [@] At icon
+- [f] File Icon
+- [p] Puzzle Icon
 - ["] Quote icon
 - [l] Location icon
 - [b] Bookmark icon
 - [i] Information icon
-- [S] Savings (money) icon
 - [I] Idea (light bulb) icon
-- [p] Pros (thumbs up) icon
-- [c] Cons (thumbs down) icon
-- [f] Fire icon
 - [k] Key icon
-- [w] Win (cake) icon
 - [u] Up (trend up) icon
 - [d] Down (trend down) icon
 - [+] Plus (add) icon
@@ -440,8 +438,6 @@ The fancy list items are possible through custom CSS. If you are using vanilla O
 - [g] Git icon
 - [a] letter a
 - [t] letter t 
-- [@] At icon
-- [m] Message icon
 
 #### Numbers
 

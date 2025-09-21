@@ -10,13 +10,13 @@ li[data-task='"'] input,
 li[data-task="l"] input,
 li[data-task="b"] input,
 li[data-task="i"] input,
-li[data-task="S"] input,
+/* li[data-task="S"] input, */
 li[data-task="I"] input,
 li[data-task="p"] input,
-li[data-task="c"] input,
+/* li[data-task="c"] input, */
 li[data-task="f"] input,
 li[data-task="k"] input,
-li[data-task="w"] input,
+/* li[data-task="w"] input, */
 li[data-task="u"] input,
 li[data-task="d"] input,
 li[data-task=":"] input,
@@ -30,8 +30,13 @@ li[data-task="z"] input,
 li[data-task="g"] input,
 li[data-task="a"] input,
 li[data-task="@"] input,
-li[data-task="m"] input {
+li[data-task="t"] input
+/* li[data-task="m"] input  */
+{
   pointer-events: none;
+  svg {
+    width: 2rem;
+  }
 }
 
 /* li[data-task="0"],
@@ -253,7 +258,7 @@ li[data-task='"'] {
             border-width: 0;
 
             &::before {
-                color: rgb(from var(--text-muted) r g b);
+                color: rgb(from var(--color-cyan) r g b);
                 margin: 0 3px;
                 position: absolute;
                 left: calc(var(--checkbox-size) * 1);
@@ -263,7 +268,7 @@ li[data-task='"'] {
             &::after {
                 -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!  --%3E%3Cpath d='M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z'/%3E%3C/svg%3E");
                 -webkit-mask-size: contain;
-                background-color: rgb(from var(--text-muted) r g b);
+                background-color: rgb(from var(--color-cyan) r g b);
                 left: 0px;
             }
         }
@@ -345,7 +350,7 @@ li[data-task="i"] {
     }
 }
 
-li[data-task="S"] {
+/* li[data-task="S"] {
     > input[type=checkbox] {
         &:checked {
             --checkbox-color: transparent;
@@ -368,7 +373,7 @@ li[data-task="S"] {
             }
         }
     }
-}
+} */
 
 li[data-task="I"] {
     > input[type=checkbox] {
@@ -403,7 +408,7 @@ li[data-task="p"] {
             border-width: 0;
 
             &::before {
-                color: rgb(from var(--color-green) r g b);
+                color: rgb(from var(--color-pink) r g b);
                 margin: 0 3px;
                 position: absolute;
                 left: calc(var(--checkbox-size) * 1);
@@ -411,16 +416,16 @@ li[data-task="p"] {
             }
 
             &::after {
-                -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!  --%3E%3Cpath d='M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 25.3-19.5 46-44.3 47.9c7.7 8.5 12.3 19.8 12.3 32.1c0 23.4-16.8 42.9-38.9 47.1c4.4 7.2 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z'/%3E%3C/svg%3E");
+                -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-puzzle-icon lucide-puzzle'%3E%3Cpath d='M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z'/%3E%3C/svg%3E");
                 -webkit-mask-size: contain;
-                background-color: rgb(from var(--color-green) r g b);
+                background-color: rgb(from var(--color-pink) r g b);
                 left: 0px;
             }
         }
     }
 }
 
-li[data-task="c"] {
+/* li[data-task="c"] {
     > input[type=checkbox] {
         &:checked {
             --checkbox-color: transparent;
@@ -443,7 +448,7 @@ li[data-task="c"] {
             }
         }
     }
-}
+} */
 
 li[data-task="f"] {
     > input[type=checkbox] {
@@ -453,7 +458,7 @@ li[data-task="f"] {
             border-width: 0;
 
             &::before {
-                color: rgb(from var(--color-red) r g b);
+                color: rgb(from var(--text-muted) r g b);
                 margin: 0 3px;
                 position: absolute;
                 left: calc(var(--checkbox-size) * 1);
@@ -461,9 +466,9 @@ li[data-task="f"] {
             }
 
             &::after {
-                -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWZsYW1lIj48cGF0aCBkPSJNOC41IDE0LjVBMi41IDIuNSAwIDAgMCAxMSAxMmMwLTEuMzgtLjUtMi0xLTMtMS4wNzItMi4xNDMtLjIyNC00LjA1NCAyLTYgLjUgMi41IDIgNC45IDQgNi41IDIgMS42IDMgMy41IDMgNS41YTcgNyAwIDEgMS0xNCAwYzAtMS4xNTMuNDMzLTIuMjk0IDEtM2EyLjUgMi41IDAgMCAwIDIuNSAyLjV6Ii8+PC9zdmc+");
+                -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-file-symlink-icon lucide-file-symlink'%3E%3Cpath d='m10 18 3-3-3-3'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3Cpath d='M4 11V4a2 2 0 0 1 2-2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h7'/%3E%3C/svg%3E");
                 -webkit-mask-size: contain;
-                background-color: rgb(from var(--color-red) r g b);
+                background-color: rgb(from var(--text-muted) r g b);
                 left: 0px;
             }
         }
@@ -495,7 +500,7 @@ li[data-task="k"] {
     }
 }
 
-li[data-task="w"] {
+/* li[data-task="w"] {
     > input[type=checkbox] {
         &:checked {
             --checkbox-color: transparent;
@@ -518,7 +523,7 @@ li[data-task="w"] {
             }
         }
     }
-}
+} */
 
 li[data-task="u"] {
     > input[type=checkbox] {
@@ -795,7 +800,7 @@ li[data-task="@"] {
     }
 }
 
-li[data-task="m"] {
+/* li[data-task="m"] {
     > input[type=checkbox] {
         &:checked {
             --checkbox-color: transparent;
@@ -818,7 +823,7 @@ li[data-task="m"] {
             }
         }
     }
-}
+} */
 
 /* Speech Bubbles or Number */
 
