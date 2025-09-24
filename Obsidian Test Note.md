@@ -437,7 +437,9 @@ The fancy list items are possible through custom CSS. If you are using vanilla O
 - [z] Lightning bolt icon
 - [g] Git icon
 - [a] letter a
-- [t] letter t 
+- [t] letter t
+- [q] QR Code icon
+- [h] HREF Link icon
 
 #### Numbers
 

@@ -30,7 +30,9 @@ li[data-task="z"] input,
 li[data-task="g"] input,
 li[data-task="a"] input,
 li[data-task="@"] input,
-li[data-task="t"] input
+li[data-task="t"] input,
+li[data-task="q"] input,
+li[data-task="h"] input
 /* li[data-task="m"] input  */
 {
   pointer-events: none;
@@ -824,6 +826,56 @@ li[data-task="@"] {
         }
     }
 } */
+
+li[data-task="q"] {
+    > input[type=checkbox] {
+        &:checked {
+            --checkbox-color: transparent;
+            --checkbox-color-hover: transparent;
+            border-width: 0;
+    
+            &::before {
+                color: rgb(from var(--text-normal) r g b);
+                margin: 0 3px;
+                position: absolute;
+                left: calc(var(--checkbox-size) * 1);
+                font-weight: bold;
+            }
+            
+            &::after {
+                -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-qr-code-icon lucide-qr-code'%3E%3Crect width='5' height='5' x='3' y='3' rx='1'/%3E%3Crect width='5' height='5' x='16' y='3' rx='1'/%3E%3Crect width='5' height='5' x='3' y='16' rx='1'/%3E%3Cpath d='M21 16h-3a2 2 0 0 0-2 2v3'/%3E%3Cpath d='M21 21v.01'/%3E%3Cpath d='M12 7v3a2 2 0 0 1-2 2H7'/%3E%3Cpath d='M3 12h.01'/%3E%3Cpath d='M12 3h.01'/%3E%3Cpath d='M12 16v.01'/%3E%3Cpath d='M16 12h1'/%3E%3Cpath d='M21 12v.01'/%3E%3Cpath d='M12 21v-1'/%3E%3C/svg%3E");
+                -webkit-mask-size: contain;
+                background-color: rgb(from var(--text-normal) r g b);
+                left: 0px;
+            }
+        }
+    }
+}
+
+li[data-task="h"] {
+    > input[type=checkbox] {
+        &:checked {
+            --checkbox-color: transparent;
+            --checkbox-color-hover: transparent;
+            border-width: 0;
+    
+            &::before {
+                color: rgb(from var(--color-orange) r g b);
+                margin: 0 3px;
+                position: absolute;
+                left: calc(var(--checkbox-size) * 1);
+                font-weight: bold;
+            }
+            
+            &::after {
+                -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-link-icon lucide-link'%3E%3Cpath d='M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71'/%3E%3Cpath d='M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71'/%3E%3C/svg%3E");
+                -webkit-mask-size: contain;
+                background-color: rgb(from var(--color-orange) r g b);
+                left: 0px;
+            }
+        }
+    }
+}
 
 /* Speech Bubbles or Number */
 
