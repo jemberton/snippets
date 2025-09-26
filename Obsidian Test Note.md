@@ -424,6 +424,7 @@ The fancy list items are possible through custom CSS. If you are using vanilla O
 - [p] Puzzle Icon
 - ["] Quote icon
 - [l] Location icon
+- [L] Lego icon
 - [b] Bookmark icon
 - [i] Information icon
 - [I] Idea (light bulb) icon
