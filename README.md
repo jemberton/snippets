@@ -13,6 +13,21 @@ This branch of the repository contains CSS stylesheets that *should* be universa
 
 All snippets in this branch are meant to be independent of the specific theme in use in your vault. The theme you have enabled may have styles set for things other than color. If you are using a theme that makes major alterations to sizing and position of any rendered element, the snippets in this branch may conflict with the intended look and feel of your theme.
 
+### Features
+
+> [!info] Your mileage may vary
+> The snippets in this branch were built using the default theme for Obsidian. Some of the snippets support community plugins. Not everything here will be useful to you! Some of might not work quite right either!
+
+1. Colored headings (H1-H6) in the outline for readability and convenience.
+
+    ![Preview Outline Colors](_assets/preview-outline.png)
+
+2. work in progress
+
+#### Plugins
+
+> [!warning] Work in progress
+
 ## Mobile Support
 
 The mobile support for the universal branch is an ongoing project. Different device sizes and color schemes make it difficult to find a good solution.
