@@ -47,6 +47,30 @@
     }
 }
 
+.titlebar-button {
+    &.mod-minimize {
+        display: none;
+    }
+
+    &.mod-maximize {
+        display: none;
+    }
+}
+
+/* .mod-right-split {
+    .workspace-tab-header-container {
+        --frame-right-space: 44px;
+        /* flex: 0 1 auto; */
+    }
+} */
+
+.workspace-tab-header-container {
+    --frame-right-space: 44px;
+    /* flex: 0 1 auto; */
+}
+
+
+
 @media screen and (max-width: 767px) {
     .markdown-preview-sizer, .cm-sizer {
         --custom-readable-width: 100%;
