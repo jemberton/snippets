@@ -57,12 +57,12 @@
     }
 }
 
-/* .mod-right-split {
+.mod-right-split {
     .workspace-tab-header-container {
         --frame-right-space: 44px;
         /* flex: 0 1 auto; */
     }
-} */
+}
 
 .workspace-tab-header-container {
     --frame-right-space: 44px;
